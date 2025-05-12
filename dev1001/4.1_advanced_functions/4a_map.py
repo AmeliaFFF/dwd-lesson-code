@@ -1,6 +1,6 @@
 # Higher-order Functions: map
 # ---------------------------
-# map() transforms a list into a new list by applying a function to each element.
+# map() transforms an iterable into a new iterable by applying a function to each element.
 # Syntax: map(function, iterable) -> iterable (map object)
 # An iterable is any object capable of being iterated over (eg. list)
 
@@ -21,5 +21,5 @@ print(numbers)
 # MODIFY
 # Given a list of names get a list of greetings eg. ['Hello Alice', 'Hello Bob', ...]
 names = ['alice', 'bob', 'charlie']
-greetings = list(map(lambda name: '''your code here'''))
+greetings = list(map(lambda name: f'Hello {name.capitalize()}!', names))
 print(greetings)

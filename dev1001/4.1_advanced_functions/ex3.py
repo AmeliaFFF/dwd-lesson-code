@@ -7,6 +7,8 @@
 
 points = [(1, 2), (3, 1), (5, -4), (0, 0)]
 
-sorted_points = # your code here
+# Can abbreviate lambda param to 'p' (instead of 'point') because of the context (inline).
+# In any other context, use a more descriptive name.
+sorted_points = sorted(points, key=lambda p: p[1])
 
 print(sorted_points)

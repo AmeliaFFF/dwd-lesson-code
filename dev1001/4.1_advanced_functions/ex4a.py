@@ -10,7 +10,17 @@
 
 prices = [10.99, 5.49, 20.00]
 
+def add_tax(p):
+    return p * 1.20
 
+prices_with_tax = map(add_tax, prices)
+print(f"Prices with tax: {list(prices_with_tax)}")
+print(f"Prices without tax: {list(prices)}  ")
+
+# ----
+
+plus_tax = list(map(lambda p: round(p * 1.2, 2), prices))
+print(plus_tax)
 
 # Exercise 2
 # ----------
@@ -24,4 +34,17 @@ prices = [10.99, 5.49, 20.00]
 
 scores = [85, 92, 78, 60, 42, 95, 70, 53]
 
+def score_to_grade(score):
+    if score >= 90:
+        return "HD"
+    elif score >= 80:
+        return "D"
+    elif score >= 70:
+        return "C"
+    elif score >= 50:
+        return "P"
+    else:
+        return "F" 
 
+grades = list(map(score_to_grade, scores))
+print(f"Grades: {grades}")

@@ -14,6 +14,10 @@
 # Example 1: lambda function to calculate exponents
 # Note the absence of a name, and since it's a function, we can store it in a var.
 power = lambda base, exp: base ** exp
+# This could also be written as:
+# def power(base,exp):
+#     return base ** exp
+# Double-asterix (**) means 'raised to' or 'to the power of'
 # Call the lambda just like any other function
 print(power(2, 3)) # 8
 
@@ -30,3 +34,6 @@ process_interaction("Charlie", lambda person_name: f"What's up, {person_name}?")
 # 2. Call process_interaction and pass the lambda to it
 def capitalize_string(s):
     return s.capitalize()
+
+capitalize_string = lambda s: s.capitalize()
+process_interaction("amelia", capitalize_string)
