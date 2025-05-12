@@ -14,3 +14,7 @@ process_interaction("Bob", farewell)
 # We want a new interaction: shouting a question.
 # Define a *new* callback function `shout_question` and pass it to
 # `process_interaction` so it prints something like 'HEY, ALICE, HOW ARE YOU?!'?"
+def shout_question(name):
+    return f"HEY, {name.upper()}, HOW ARE YOU?!"
+
+process_interaction("Matt", shout_question)
