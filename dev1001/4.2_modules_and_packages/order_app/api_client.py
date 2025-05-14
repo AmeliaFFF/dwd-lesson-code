@@ -28,3 +28,10 @@ if __name__ == "__main__":
     data2 = fetch_product_data(5)
     if data2:
             print(f"\nFetched Title: {data2.get('title', 'N/A')}")
+
+    print("\nFetching data for product ID 7 (example)...")
+    data3 = fetch_product_data(7)
+    if data3:
+            print(f"\nFetched Title: {data3.get('title', 'N/A')}")
+            print(f"\nFetched User ID: {data3.get('userId', 'N/A')}")
+            print(f"\nFetched Status: {data3.get('completed', 'N/A')}")
