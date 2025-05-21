@@ -42,6 +42,14 @@ class Cat(Animal):
     def purr(self):
         print(f"{self.name} purrs contentedly.")
 
+class LoudDog(Animal):
+    def __init__(self, name, bark_volume):
+        super().__init__(name)
+        self.bark_volume = bark_volume
+
+    def bark(self):
+        print(f"{self.name} (the dog) barks: Woof! (Volume: {self.bark_volume})")
+
 # --- Let's USE the Animal and Cat classes ---
 print("--- Creating and Using Animal and Cat Objects ---")
 generic_animal = Animal("Creature")
