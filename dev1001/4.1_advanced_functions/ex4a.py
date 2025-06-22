@@ -15,7 +15,7 @@ def add_tax(p):
 
 prices_with_tax = map(add_tax, prices)
 print(f"Prices with tax: {list(prices_with_tax)}")
-print(f"Prices without tax: {list(prices)}  ")
+print(f"Prices without tax: {list(prices)}")
 
 # ----
 
