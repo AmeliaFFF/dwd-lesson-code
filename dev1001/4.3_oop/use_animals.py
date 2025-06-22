@@ -47,7 +47,7 @@ class LoudDog(Animal):
         super().__init__(name)
         self.bark_volume = bark_volume
 
-    def bark(self):
+    def speak(self):
         print(f"{self.name} (the dog) barks: Woof! (Volume: {self.bark_volume})")
 
 # --- Let's USE the Animal and Cat classes ---
