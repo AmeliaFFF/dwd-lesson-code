@@ -14,6 +14,10 @@ def fetch_product_data(product_id):
         print("--- Raw Product Data (JSON) ---")
         print(json.dumps(product, indent=2)) # Pretty print
         return product
+    except requests.exceptions.NameResolutionError as e:
+        print(f"URL not found!")
+    except requests.exceptions.InvalidURL as e:
+        print(f"Invalid URL!")
     except requests.exceptions.RequestException as e:
         print(f"Error fetching product data: {e}")
         return None

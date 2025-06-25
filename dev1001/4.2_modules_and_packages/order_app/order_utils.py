@@ -11,13 +11,17 @@ def calculate_tax(subtotal_amount):
 
 def calculate_grand_total(subtotal_amount):
     """Calculates grand total including tax."""
+    subtotal_amount = apply_discount(subtotal_amount)
     tax = calculate_tax(subtotal_amount)
     return subtotal_amount + tax
 
 def apply_discount(subtotal, discount_threshold=50.0, discount_percentage=0.10):
-    """Calcculate and apply discount to subtotal if eligible."""
+    """Calculate and apply discount to subtotal if eligible."""
     if subtotal > discount_threshold:
         return subtotal * (1 - discount_percentage)
     else:
         return subtotal
+    # This could be written as a ternary instead:
+    # return subtotal * (1 - discount_percentage if subtotal > discount_threshold else 1)
+    # The above if/else is more readable though.
       
