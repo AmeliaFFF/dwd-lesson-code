@@ -10,10 +10,11 @@
 
 class Dog:
     # This is the constructor method
-    def __init__(self, name_param, breed_param):
+    def __init__(self, name_param, breed_param, age_param):
         print(f"A new dog named {name_param} is being created!")
         self.name = name_param  # Instance variable
         self.breed = breed_param # Instance variable
+        self.age = age_param
 
     # This is a method
     def bark(self):
@@ -21,6 +22,10 @@ class Dog:
 
     def describe(self):
         print(f"{self.name} is a {self.breed}.")
+
+    def celebrate_birthday(self):
+        self.age += 1
+        print(f"HAPPY BIRTHDAY {self.name}!!! You are {self.age} years old today!")
 
 # --- Let's USE the Dog class ---
 print("--- Creating and Using Dog Objects ---")
@@ -42,3 +47,7 @@ dog2.bark()
 print("\n--- Accessing Instance Variables (generally done via methods) ---")
 print(f"Dog 1's name is: {dog1.name}")
 print(f"Dog 2's breed is: {dog2.breed}")
+
+print(f"{dog1.name} is {dog1.age} years old.") # This will print the original age.
+dog1.celebrate_birthday() # This will increment age, and print the Happy Birthday message.
+print(f"{dog1.name} is {dog1.age} years old.") # This will print the new age (+1 year).
