@@ -9,3 +9,4 @@ def open_secret_door(code):
         raise SecretDoorError("Wrong secret code!")
     print("Secret door opens!")
 
+# Boop me baby one more time
